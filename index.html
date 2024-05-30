@@ -221,7 +221,7 @@
 
             // Function to fit text in the rectangle
             function fitTextToRectangle(ctx, text, maxWidth, maxHeight) {
-                let fontSize = 48;
+                let fontSize = 80;
                 ctx.font = `bold ${fontSize}px sans-serif`;
                 let textWidth = ctx.measureText(text).width;
                 let textHeight = fontSize;
@@ -251,8 +251,9 @@
                             const rectY = 2580;
                             const rectWidth = 765;
                             const rectHeight = 115;
-                            const fontSize = fitTextToRectangle(ctx, name, rectWidth, rectHeight);
+                            const fontSize = fitTextToRectangle(ctx, name, rectWidth + 30, rectHeight + 100);
                             ctx.font = `bold ${fontSize}px sans-serif`;
+                            // print(fontSize)
                             ctx.fillStyle = '#000000';
                             ctx.strokeStyle = '#ffffff';
                             ctx.lineWidth = 10;
